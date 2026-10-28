@@ -1,0 +1,11 @@
+id,naziv,kreator,zanr,ocjena,godina_pocetka,godina_zavrsetka,broj_sezona,broj_epizoda,prosjecno_trajanje_epizode,zemlja,glumac
+1,Breaking Bad,Vince Gilligan,Drama,9.5,2008,2013,5,62,48,SAD,Bryan Cranston
+2,Better Call Saul,Vince Gilligan,Drama,9.0,2015,2022,6,63,45,SAD,Bob Odenkirk
+3,The Mentalist,Bruno Heller,Krimi,8.2,2008,2015,7,151,43,SAD,Simon Baker
+4,The Sopranos,David Chase,Krimi,9.2,1999,2007,6,86,55,SAD,James Gandolfini
+5,Sherlock,Mark Gatiss,Krimi,9.0,2010,2017,4,15,90,Velika Britanija,Benedict Cumberbatch
+6,Pluribus,Vince Gilligan,Znanstvena fantastika,7.9,2025,,1,10,60,SAD,Rhea Seehorn
+7,The Office,Greg Daniels,Komedija,9.0,2005,2013,9,191,22,SAD,Steve Carell
+8,Dexter,James Manos Jr.,Krimi,8.6,2006,2013,8,96,60,SAD,Michael C. Hall
+9,Severance,Dan Erickson,Znanstvena fantastika,8.6,2022,,2,25,50,SAD,Adam Scott
+10,Ted Lasso,Brendan Hunt,Komedija,8.7,2020,,4,44,30,SAD,Jason Sudeikis
