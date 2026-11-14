@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Televizijske serije - otvoreni skup podataka</title>
+    <meta
+      name="description"
+      content="Otvoreni skup podataka o 10 televizijskih serija s mrežama, žanrovima, kreatorima i glavnim ulogama, dostupan u CSV i JSON formatu."
+    />
+    <meta name="author" content="Mihael Jakšić" />
+    <style>
+      body {
+        font-family: sans-serif;
+        max-width: 900px;
+        margin: 20px auto;
+        padding: 0 20px;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 6px;
+        text-align: left;
+        vertical-align: top;
+      }
+      th {
+        background: #eee;
+      }
+      td:first-child,
+      th:first-child {
+        width: 220px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Televizijske serije</h1>
+
+    <h2>Preuzimanje</h2>
+    <ul>
+      <li><a href="serije.csv" download>Cijeli skup podataka (CSV)</a></li>
+      <li><a href="serije.json" download>Cijeli skup podataka (JSON)</a></li>
+      <li><a href="datatable.html">Tablični prikaz i filtriranje</a></li>
+    </ul>
+
+    <h2>Opis</h2>
+    <p>
+      Skup podataka sadrži podatke o 10 poznatih američkih i britanskih
+      televizijskih serija. Za svaku seriju navedeni su mreža na kojoj se
+      prikazuje, zemlja podrijetla, godine početka i završetka, broj sezona i
+      epizoda, prosječno trajanje epizode i ocjena. Svaka serija povezana je s
+      jednim ili više žanrova i kreatora te s tri glavne uloge (glumac i lik).
+    </p>
+
+    <h2>Metapodaci</h2>
+    <table>
+      <tr>
+        <th>Naziv skupa</th>
+        <td>Televizijske serije</td>
+      </tr>
+      <tr>
+        <th>Autor</th>
+        <td>Mihael Jakšić</td>
+      </tr>
+      <tr>
+        <th>Verzija</th>
+        <td>2.0</td>
+      </tr>
+      <tr>
+        <th>Licenca</th>
+        <td>
+          <a href="https://creativecommons.org/publicdomain/zero/1.0/"
+            >CC0 1.0 Universal</a
+          >
+          - podaci su u javnom vlasništvu i mogu se slobodno koristiti
+        </td>
+      </tr>
+      <tr>
+        <th>Jezik</th>
+        <td>hrvatski (nazivi serija, likova i mreža su izvorni)</td>
+      </tr>
+      <tr>
+        <th>Ključne riječi</th>
+        <td>televizija, serije, glumci, kreatori, žanrovi</td>
+      </tr>
+      <tr>
+        <th>Vremenski obuhvat</th>
+        <td>1999. - 2026.</td>
+      </tr>
+      <tr>
+        <th>Prostorni obuhvat</th>
+        <td>SAD, Velika Britanija</td>
+      </tr>
+      <tr>
+        <th>Broj instanci</th>
+        <td>10 serija, 30 uloga</td>
+      </tr>
+      <tr>
+        <th>Formati</th>
+        <td>CSV, JSON</td>
+      </tr>
+      <tr>
+        <th>Kodiranje</th>
+        <td>UTF-8</td>
+      </tr>
+      <tr>
+        <th>Izvor podataka</th>
+        <td><a href="https://www.imdb.com">IMDb</a></td>
+      </tr>
+      <tr>
+        <th>Baza podataka</th>
+        <td>PostgreSQL</td>
+      </tr>
+    </table>
+
+    <h2>Opis atributa</h2>
+    <table>
+      <tr>
+        <th>Atribut</th>
+        <th>Tip</th>
+        <th>Opis</th>
+      </tr>
+      <tr>
+        <td>id</td>
+        <td>cijeli broj</td>
+        <td>Jedinstveni identifikator serije</td>
+      </tr>
+      <tr>
+        <td>naziv</td>
+        <td>tekst</td>
+        <td>Izvorni naziv serije</td>
+      </tr>
+      <tr>
+        <td>zemlja</td>
+        <td>tekst</td>
+        <td>Zemlja podrijetla</td>
+      </tr>
+      <tr>
+        <td>mreza</td>
+        <td>objekt (naziv, vrsta)</td>
+        <td>
+          Mreža ili streaming servis na kojem se serija izvorno prikazivala
+        </td>
+      </tr>
+      <tr>
+        <td>godina_pocetka</td>
+        <td>cijeli broj</td>
+        <td>Godina prve epizode</td>
+      </tr>
+      <tr>
+        <td>godina_zavrsetka</td>
+        <td>cijeli broj ili null</td>
+        <td>Godina zadnje epizode; null ako serija još traje</td>
+      </tr>
+      <tr>
+        <td>broj_sezona</td>
+        <td>cijeli broj</td>
+        <td>Ukupan broj sezona</td>
+      </tr>
+      <tr>
+        <td>broj_epizoda</td>
+        <td>cijeli broj</td>
+        <td>Ukupan broj epizoda</td>
+      </tr>
+      <tr>
+        <td>prosjecno_trajanje_epizode</td>
+        <td>cijeli broj</td>
+        <td>Prosječno trajanje epizode u minutama</td>
+      </tr>
+      <tr>
+        <td>ocjena</td>
+        <td>decimalni broj</td>
+        <td>Ocjena korisnika IMDb-a (0 - 10)</td>
+      </tr>
+      <tr>
+        <td>zanrovi</td>
+        <td>niz tekstova</td>
+        <td>Žanrovi serije</td>
+      </tr>
+      <tr>
+        <td>kreatori</td>
+        <td>niz objekata (ime, prezime)</td>
+        <td>Kreatori serije</td>
+      </tr>
+      <tr>
+        <td>uloge</td>
+        <td>niz objekata (ime, prezime, lik)</td>
+        <td>Tri glavne uloge, poredane po važnosti</td>
+      </tr>
+    </table>
+    <p>
+      U CSV-u je jedan redak po ulozi, pa se podaci o seriji ponavljaju, a
+      žanrovi i kreatori su odvojeni znakom „;“. Mreža je razdvojena u stupce
+      <code>mreza</code> i <code>vrsta_mreze</code>, a uloga u
+      <code>glumac_ime</code>, <code>glumac_prezime</code> i <code>lik</code>.
+    </p>
+  </body>
+</html>

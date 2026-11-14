@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TV serije - tablicni prikaz</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 20px;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 6px;
+        text-align: left;
+        vertical-align: top;
+      }
+      th {
+        background: #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="index.html">Početna</a>
+    <h1>Televizijske serije</h1>
+    <form id="obrazac">
+      <input type="text" id="pojam" placeholder="Pretraži..." />
+      <select id="atribut">
+        <option value="sve">Svi atributi</option>
+        <option value="naziv">Naziv</option>
+        <option value="mreza">Mreža</option>
+        <option value="zemlja">Zemlja</option>
+        <option value="godina_pocetka">Godina početka</option>
+        <option value="godina_zavrsetka">Godina završetka</option>
+        <option value="broj_sezona">Broj sezona</option>
+        <option value="broj_epizoda">Broj epizoda</option>
+        <option value="trajanje">Trajanje epizode</option>
+        <option value="ocjena">Ocjena</option>
+        <option value="zanr">Žanr</option>
+        <option value="kreator">Kreator</option>
+        <option value="glumac">Glumac</option>
+        <option value="lik">Lik</option>
+      </select>
+      <button type="submit">Filtriraj</button>
+      <button type="button" id="ponisti">Poništi</button>
+    </form>
+    <p>
+      Preuzmi prikazane podatke:
+      <a id="preuzmi-csv" href="/api/serije?format=csv">CSV</a>
+      <a id="preuzmi-json" href="/api/serije?format=json">JSON</a>
+    </p>
+    <table id="tablica">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Naziv</th>
+          <th>Mreža</th>
+          <th>Zemlja</th>
+          <th>Početak</th>
+          <th>Završetak</th>
+          <th>Sezone</th>
+          <th>Epizode</th>
+          <th>Trajanje (min)</th>
+          <th>Ocjena</th>
+          <th>Žanrovi</th>
+          <th>Kreatori</th>
+          <th>Glumci (lik)</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script>
+      function celija(red, teskt) {
+        const td = document.createElement("td");
+        td.textContent = teskt;
+        red.appendChild(td);
+      }
+
+      function prikazi(serije) {
+        const tbody = document.querySelector("#tablica tbody");
+        tbody.innerHTML = "";
+
+        for (const s of serije) {
+          const red = document.createElement("tr");
+          celija(red, s.id);
+          celija(red, s.naziv);
+          celija(red, s.mreza.naziv);
+          celija(red, s.zemlja);
+          celija(red, s.godina_pocetka);
+          celija(red, s.godina_zavrsetka ?? "u tijeku");
+          celija(red, s.broj_sezona);
+          celija(red, s.broj_epizoda);
+          celija(red, s.prosjecno_trajanje_epizode);
+          celija(red, s.ocjena);
+          celija(red, s.zanrovi.join(", "));
+          celija(
+            red,
+            s.kreatori.map((k) => k.ime + " " + k.prezime).join(", "),
+          );
+          celija(
+            red,
+            s.uloge.map((u) => `${u.ime} ${u.prezime} (${u.lik})`).join(", "),
+          );
+          tbody.appendChild(red);
+        }
+      }
+
+      async function dohvati() {
+        const pojam = document.getElementById("pojam").value;
+        const atribut = document.getElementById("atribut").value;
+        const parametri = new URLSearchParams({ pojam, atribut });
+
+        document.getElementById("preuzmi-csv").href =
+          "/api/serije?format=csv&" + parametri;
+        document.getElementById("preuzmi-json").href =
+          "/api/serije?format=json&" + parametri;
+
+        const odgovor = await fetch("/api/serije?" + parametri);
+        const serije = await odgovor.json();
+        prikazi(serije);
+      }
+
+      document.getElementById("obrazac").addEventListener("submit", (e) => {
+        e.preventDefault();
+        dohvati();
+      });
+
+      document.getElementById("ponisti").addEventListener("click", () => {
+        document.getElementById("obrazac").reset();
+        dohvati();
+      });
+
+      dohvati();
+    </script>
+  </body>
+</html>

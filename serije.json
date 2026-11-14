@@ -2,141 +2,206 @@
   {
     "id": 1,
     "naziv": "Breaking Bad",
-    "kreator": "Vince Gilligan",
-    "zanr": "Drama",
-    "ocjena": 9.5,
+    "zemlja": "SAD",
+    "mreza": { "naziv": "AMC", "vrsta": "televizijska mreža" },
     "godina_pocetka": 2008,
     "godina_zavrsetka": 2013,
     "broj_sezona": 5,
     "broj_epizoda": 62,
     "prosjecno_trajanje_epizode": 48,
-    "zemlja": "SAD",
-    "glavna_uloga": { "glumac": "Bryan Cranston" }
+    "ocjena": 9.5,
+    "zanrovi": ["Drama", "Krimi", "Triler"],
+    "kreatori": [{ "ime": "Vince", "prezime": "Gilligan" }],
+    "uloge": [
+      { "ime": "Bryan", "prezime": "Cranston", "lik": "Walter White" },
+      { "ime": "Aaron", "prezime": "Paul", "lik": "Jesse Pinkman" },
+      { "ime": "Anna", "prezime": "Gunn", "lik": "Skyler White" }
+    ]
   },
   {
     "id": 2,
     "naziv": "Better Call Saul",
-    "kreator": "Vince Gilligan",
-    "zanr": "Drama",
-    "ocjena": 9.0,
+    "zemlja": "SAD",
+    "mreza": { "naziv": "AMC", "vrsta": "televizijska mreža" },
     "godina_pocetka": 2015,
     "godina_zavrsetka": 2022,
     "broj_sezona": 6,
     "broj_epizoda": 63,
     "prosjecno_trajanje_epizode": 45,
-    "zemlja": "SAD",
-    "glavna_uloga": { "glumac": "Bob Odenkirk" }
+    "ocjena": 9.0,
+    "zanrovi": ["Drama", "Krimi"],
+    "kreatori": [
+      { "ime": "Vince", "prezime": "Gilligan" },
+      { "ime": "Peter", "prezime": "Gould" }
+    ],
+    "uloge": [
+      { "ime": "Bob", "prezime": "Odenkirk", "lik": "Jimmy McGill" },
+      { "ime": "Rhea", "prezime": "Seehorn", "lik": "Kim Wexler" },
+      { "ime": "Jonathan", "prezime": "Banks", "lik": "Mike Ehrmantraut" }
+    ]
   },
   {
     "id": 3,
     "naziv": "The Mentalist",
-    "kreator": "Bruno Heller",
-    "zanr": "Krimi",
-    "ocjena": 8.2,
+    "zemlja": "SAD",
+    "mreza": { "naziv": "CBS", "vrsta": "televizijska mreža" },
     "godina_pocetka": 2008,
     "godina_zavrsetka": 2015,
     "broj_sezona": 7,
     "broj_epizoda": 151,
     "prosjecno_trajanje_epizode": 43,
-    "zemlja": "SAD",
-    "glavna_uloga": { "glumac": "Simon Baker" }
+    "ocjena": 8.2,
+    "zanrovi": ["Drama", "Krimi", "Misterij"],
+    "kreatori": [{ "ime": "Bruno", "prezime": "Heller" }],
+    "uloge": [
+      { "ime": "Simon", "prezime": "Baker", "lik": "Patrick Jane" },
+      { "ime": "Robin", "prezime": "Tunney", "lik": "Teresa Lisbon" },
+      { "ime": "Tim", "prezime": "Kang", "lik": "Kimball Cho" }
+    ]
   },
   {
     "id": 4,
     "naziv": "The Sopranos",
-    "kreator": "David Chase",
-    "zanr": "Krimi",
-    "ocjena": 9.2,
+    "zemlja": "SAD",
+    "mreza": { "naziv": "HBO", "vrsta": "televizijska mreža" },
     "godina_pocetka": 1999,
     "godina_zavrsetka": 2007,
     "broj_sezona": 6,
     "broj_epizoda": 86,
     "prosjecno_trajanje_epizode": 55,
-    "zemlja": "SAD",
-    "glavna_uloga": { "glumac": "James Gandolfini" }
+    "ocjena": 9.2,
+    "zanrovi": ["Drama", "Krimi"],
+    "kreatori": [{ "ime": "David", "prezime": "Chase" }],
+    "uloge": [
+      { "ime": "James", "prezime": "Gandolfini", "lik": "Tony Soprano" },
+      { "ime": "Edie", "prezime": "Falco", "lik": "Carmela Soprano" },
+      {
+        "ime": "Michael",
+        "prezime": "Imperioli",
+        "lik": "Christopher Moltisanti"
+      }
+    ]
   },
   {
     "id": 5,
     "naziv": "Sherlock",
-    "kreator": "Mark Gatiss",
-    "zanr": "Krimi",
-    "ocjena": 9.0,
+    "zemlja": "Velika Britanija",
+    "mreza": { "naziv": "BBC One", "vrsta": "televizijska mreža" },
     "godina_pocetka": 2010,
     "godina_zavrsetka": 2017,
     "broj_sezona": 4,
     "broj_epizoda": 15,
     "prosjecno_trajanje_epizode": 90,
-    "zemlja": "Velika Britanija",
-    "glavna_uloga": { "glumac": "Benedict Cumberbatch" }
+    "ocjena": 9.0,
+    "zanrovi": ["Drama", "Krimi", "Misterij"],
+    "kreatori": [
+      { "ime": "Mark", "prezime": "Gatiss" },
+      { "ime": "Steven", "prezime": "Moffat" }
+    ],
+    "uloge": [
+      { "ime": "Benedict", "prezime": "Cumberbatch", "lik": "Sherlock Holmes" },
+      { "ime": "Martin", "prezime": "Freeman", "lik": "John Watson" },
+      { "ime": "Una", "prezime": "Stubbs", "lik": "Mrs. Hudson" }
+    ]
   },
   {
     "id": 6,
     "naziv": "Pluribus",
-    "kreator": "Vince Gilligan",
-    "zanr": "Znanstvena fantastika",
-    "ocjena": 7.9,
+    "zemlja": "SAD",
+    "mreza": { "naziv": "Apple TV", "vrsta": "streaming servis" },
     "godina_pocetka": 2025,
     "godina_zavrsetka": null,
     "broj_sezona": 1,
     "broj_epizoda": 10,
     "prosjecno_trajanje_epizode": 60,
-    "zemlja": "SAD",
-    "glavna_uloga": { "glumac": "Rhea Seehorn" }
+    "ocjena": 7.9,
+    "zanrovi": ["Drama", "Znanstvena fantastika"],
+    "kreatori": [{ "ime": "Vince", "prezime": "Gilligan" }],
+    "uloge": [
+      { "ime": "Rhea", "prezime": "Seehorn", "lik": "Carol Sturka" },
+      { "ime": "Karolina", "prezime": "Wydra", "lik": "Zosia" },
+      { "ime": "Carlos-Manuel", "prezime": "Vesga", "lik": "Manousos Oviedo" }
+    ]
   },
   {
     "id": 7,
     "naziv": "The Office",
-    "kreator": "Greg Daniels",
-    "zanr": "Komedija",
-    "ocjena": 9.0,
+    "zemlja": "SAD",
+    "mreza": { "naziv": "NBC", "vrsta": "televizijska mreža" },
     "godina_pocetka": 2005,
     "godina_zavrsetka": 2013,
     "broj_sezona": 9,
     "broj_epizoda": 191,
     "prosjecno_trajanje_epizode": 22,
-    "zemlja": "SAD",
-    "glavna_uloga": { "glumac": "Steve Carell" }
+    "ocjena": 9.0,
+    "zanrovi": ["Komedija"],
+    "kreatori": [{ "ime": "Greg", "prezime": "Daniels" }],
+    "uloge": [
+      { "ime": "Steve", "prezime": "Carell", "lik": "Michael Scott" },
+      { "ime": "Rainn", "prezime": "Wilson", "lik": "Dwight Schrute" },
+      { "ime": "John", "prezime": "Krasinski", "lik": "Jim Halpert" }
+    ]
   },
   {
     "id": 8,
     "naziv": "Dexter",
-    "kreator": "James Manos Jr.",
-    "zanr": "Krimi",
-    "ocjena": 8.6,
+    "zemlja": "SAD",
+    "mreza": { "naziv": "Showtime", "vrsta": "televizijska mreža" },
     "godina_pocetka": 2006,
     "godina_zavrsetka": 2013,
     "broj_sezona": 8,
     "broj_epizoda": 96,
     "prosjecno_trajanje_epizode": 60,
-    "zemlja": "SAD",
-    "glavna_uloga": { "glumac": "Michael C. Hall" }
+    "ocjena": 8.6,
+    "zanrovi": ["Drama", "Krimi", "Triler"],
+    "kreatori": [{ "ime": "James", "prezime": "Manos Jr." }],
+    "uloge": [
+      { "ime": "Michael C.", "prezime": "Hall", "lik": "Dexter Morgan" },
+      { "ime": "Jennifer", "prezime": "Carpenter", "lik": "Debra Morgan" },
+      { "ime": "David", "prezime": "Zayas", "lik": "Angel Batista" }
+    ]
   },
   {
     "id": 9,
     "naziv": "Severance",
-    "kreator": "Dan Erickson",
-    "zanr": "Znanstvena fantastika",
-    "ocjena": 8.6,
+    "zemlja": "SAD",
+    "mreza": { "naziv": "Apple TV", "vrsta": "streaming servis" },
     "godina_pocetka": 2022,
     "godina_zavrsetka": null,
     "broj_sezona": 2,
     "broj_epizoda": 25,
     "prosjecno_trajanje_epizode": 50,
-    "zemlja": "SAD",
-    "glavna_uloga": { "glumac": "Adam Scott" }
+    "ocjena": 8.6,
+    "zanrovi": ["Drama", "Triler", "Znanstvena fantastika"],
+    "kreatori": [{ "ime": "Dan", "prezime": "Erickson" }],
+    "uloge": [
+      { "ime": "Adam", "prezime": "Scott", "lik": "Mark Scout" },
+      { "ime": "Britt", "prezime": "Lower", "lik": "Helly R." },
+      { "ime": "John", "prezime": "Turturro", "lik": "Irving Bailiff" }
+    ]
   },
   {
     "id": 10,
     "naziv": "Ted Lasso",
-    "kreator": "Brendan Hunt",
-    "zanr": "Komedija",
-    "ocjena": 8.7,
+    "zemlja": "SAD",
+    "mreza": { "naziv": "Apple TV", "vrsta": "streaming servis" },
     "godina_pocetka": 2020,
     "godina_zavrsetka": null,
     "broj_sezona": 4,
     "broj_epizoda": 44,
     "prosjecno_trajanje_epizode": 30,
-    "zemlja": "SAD",
-    "glavna_uloga": { "glumac": "Jason Sudeikis" }
+    "ocjena": 8.7,
+    "zanrovi": ["Drama", "Komedija", "Sport"],
+    "kreatori": [
+      { "ime": "Jason", "prezime": "Sudeikis" },
+      { "ime": "Bill", "prezime": "Lawrence" },
+      { "ime": "Brendan", "prezime": "Hunt" },
+      { "ime": "Joe", "prezime": "Kelly" }
+    ],
+    "uloge": [
+      { "ime": "Jason", "prezime": "Sudeikis", "lik": "Ted Lasso" },
+      { "ime": "Hannah", "prezime": "Waddingham", "lik": "Rebecca Welton" },
+      { "ime": "Brendan", "prezime": "Hunt", "lik": "Coach Beard" }
+    ]
   }
 ]

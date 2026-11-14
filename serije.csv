@@ -1,11 +1,31 @@
-id,naziv,kreator,zanr,ocjena,godina_pocetka,godina_zavrsetka,broj_sezona,broj_epizoda,prosjecno_trajanje_epizode,zemlja,glumac
-1,Breaking Bad,Vince Gilligan,Drama,9.5,2008,2013,5,62,48,SAD,Bryan Cranston
-2,Better Call Saul,Vince Gilligan,Drama,9.0,2015,2022,6,63,45,SAD,Bob Odenkirk
-3,The Mentalist,Bruno Heller,Krimi,8.2,2008,2015,7,151,43,SAD,Simon Baker
-4,The Sopranos,David Chase,Krimi,9.2,1999,2007,6,86,55,SAD,James Gandolfini
-5,Sherlock,Mark Gatiss,Krimi,9.0,2010,2017,4,15,90,Velika Britanija,Benedict Cumberbatch
-6,Pluribus,Vince Gilligan,Znanstvena fantastika,7.9,2025,,1,10,60,SAD,Rhea Seehorn
-7,The Office,Greg Daniels,Komedija,9.0,2005,2013,9,191,22,SAD,Steve Carell
-8,Dexter,James Manos Jr.,Krimi,8.6,2006,2013,8,96,60,SAD,Michael C. Hall
-9,Severance,Dan Erickson,Znanstvena fantastika,8.6,2022,,2,25,50,SAD,Adam Scott
-10,Ted Lasso,Brendan Hunt,Komedija,8.7,2020,,4,44,30,SAD,Jason Sudeikis
+id,naziv,zemlja,mreza,vrsta_mreze,godina_pocetka,godina_zavrsetka,broj_sezona,broj_epizoda,prosjecno_trajanje_epizode,ocjena,zanrovi,kreatori,glumac_ime,glumac_prezime,lik
+1,Breaking Bad,SAD,AMC,televizijska mreža,2008,2013,5,62,48,9.5,Drama; Krimi; Triler,Vince Gilligan,Bryan,Cranston,Walter White
+1,Breaking Bad,SAD,AMC,televizijska mreža,2008,2013,5,62,48,9.5,Drama; Krimi; Triler,Vince Gilligan,Aaron,Paul,Jesse Pinkman
+1,Breaking Bad,SAD,AMC,televizijska mreža,2008,2013,5,62,48,9.5,Drama; Krimi; Triler,Vince Gilligan,Anna,Gunn,Skyler White
+2,Better Call Saul,SAD,AMC,televizijska mreža,2015,2022,6,63,45,9.0,Drama; Krimi,Vince Gilligan; Peter Gould,Bob,Odenkirk,Jimmy McGill
+2,Better Call Saul,SAD,AMC,televizijska mreža,2015,2022,6,63,45,9.0,Drama; Krimi,Vince Gilligan; Peter Gould,Rhea,Seehorn,Kim Wexler
+2,Better Call Saul,SAD,AMC,televizijska mreža,2015,2022,6,63,45,9.0,Drama; Krimi,Vince Gilligan; Peter Gould,Jonathan,Banks,Mike Ehrmantraut
+3,The Mentalist,SAD,CBS,televizijska mreža,2008,2015,7,151,43,8.2,Drama; Krimi; Misterij,Bruno Heller,Simon,Baker,Patrick Jane
+3,The Mentalist,SAD,CBS,televizijska mreža,2008,2015,7,151,43,8.2,Drama; Krimi; Misterij,Bruno Heller,Robin,Tunney,Teresa Lisbon
+3,The Mentalist,SAD,CBS,televizijska mreža,2008,2015,7,151,43,8.2,Drama; Krimi; Misterij,Bruno Heller,Tim,Kang,Kimball Cho
+4,The Sopranos,SAD,HBO,televizijska mreža,1999,2007,6,86,55,9.2,Drama; Krimi,David Chase,James,Gandolfini,Tony Soprano
+4,The Sopranos,SAD,HBO,televizijska mreža,1999,2007,6,86,55,9.2,Drama; Krimi,David Chase,Edie,Falco,Carmela Soprano
+4,The Sopranos,SAD,HBO,televizijska mreža,1999,2007,6,86,55,9.2,Drama; Krimi,David Chase,Michael,Imperioli,Christopher Moltisanti
+5,Sherlock,Velika Britanija,BBC One,televizijska mreža,2010,2017,4,15,90,9.0,Drama; Krimi; Misterij,Mark Gatiss; Steven Moffat,Benedict,Cumberbatch,Sherlock Holmes
+5,Sherlock,Velika Britanija,BBC One,televizijska mreža,2010,2017,4,15,90,9.0,Drama; Krimi; Misterij,Mark Gatiss; Steven Moffat,Martin,Freeman,John Watson
+5,Sherlock,Velika Britanija,BBC One,televizijska mreža,2010,2017,4,15,90,9.0,Drama; Krimi; Misterij,Mark Gatiss; Steven Moffat,Una,Stubbs,Mrs. Hudson
+6,Pluribus,SAD,Apple TV,streaming servis,2025,,1,10,60,7.9,Drama; Znanstvena fantastika,Vince Gilligan,Rhea,Seehorn,Carol Sturka
+6,Pluribus,SAD,Apple TV,streaming servis,2025,,1,10,60,7.9,Drama; Znanstvena fantastika,Vince Gilligan,Karolina,Wydra,Zosia
+6,Pluribus,SAD,Apple TV,streaming servis,2025,,1,10,60,7.9,Drama; Znanstvena fantastika,Vince Gilligan,Carlos-Manuel,Vesga,Manousos Oviedo
+7,The Office,SAD,NBC,televizijska mreža,2005,2013,9,191,22,9.0,Komedija,Greg Daniels,Steve,Carell,Michael Scott
+7,The Office,SAD,NBC,televizijska mreža,2005,2013,9,191,22,9.0,Komedija,Greg Daniels,Rainn,Wilson,Dwight Schrute
+7,The Office,SAD,NBC,televizijska mreža,2005,2013,9,191,22,9.0,Komedija,Greg Daniels,John,Krasinski,Jim Halpert
+8,Dexter,SAD,Showtime,televizijska mreža,2006,2013,8,96,60,8.6,Drama; Krimi; Triler,James Manos Jr.,Michael C.,Hall,Dexter Morgan
+8,Dexter,SAD,Showtime,televizijska mreža,2006,2013,8,96,60,8.6,Drama; Krimi; Triler,James Manos Jr.,Jennifer,Carpenter,Debra Morgan
+8,Dexter,SAD,Showtime,televizijska mreža,2006,2013,8,96,60,8.6,Drama; Krimi; Triler,James Manos Jr.,David,Zayas,Angel Batista
+9,Severance,SAD,Apple TV,streaming servis,2022,,2,25,50,8.6,Drama; Triler; Znanstvena fantastika,Dan Erickson,Adam,Scott,Mark Scout
+9,Severance,SAD,Apple TV,streaming servis,2022,,2,25,50,8.6,Drama; Triler; Znanstvena fantastika,Dan Erickson,Britt,Lower,Helly R.
+9,Severance,SAD,Apple TV,streaming servis,2022,,2,25,50,8.6,Drama; Triler; Znanstvena fantastika,Dan Erickson,John,Turturro,Irving Bailiff
+10,Ted Lasso,SAD,Apple TV,streaming servis,2020,,4,44,30,8.7,Drama; Komedija; Sport,Jason Sudeikis; Bill Lawrence; Brendan Hunt; Joe Kelly,Jason,Sudeikis,Ted Lasso
+10,Ted Lasso,SAD,Apple TV,streaming servis,2020,,4,44,30,8.7,Drama; Komedija; Sport,Jason Sudeikis; Bill Lawrence; Brendan Hunt; Joe Kelly,Hannah,Waddingham,Rebecca Welton
+10,Ted Lasso,SAD,Apple TV,streaming servis,2020,,4,44,30,8.7,Drama; Komedija; Sport,Jason Sudeikis; Bill Lawrence; Brendan Hunt; Joe Kelly,Brendan,Hunt,Coach Beard
