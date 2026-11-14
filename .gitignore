@@ -1,2 +1,5 @@
 node_modules/
 .DS_Store
+export_json.sql
+export_csv.sql
+export.sh

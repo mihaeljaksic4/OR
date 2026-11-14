@@ -1,18 +1,25 @@
 {
-  "name": "or",
-  "version": "1.0.0",
-  "description": "Ovaj skup podataka sadrži informacije o televizijskim serijama, uključujući nazive, kreatore, žanrove, glavne uloge, ocjene, godine prikazivanja, broj sezona i epizoda, trajanje epizoda i zemlje podrijetla.",
-  "main": "index.js",
+  "name": "or-serije",
+  "version": "2.0.0",
+  "description": "Otvoreni skup podataka o televizijskim serijama s mrežama, žanrovima, kreatorima i glavnim ulogama, uz web sučelje za pregled i filtriranje.",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
+  "author": "Mihael Jakšić",
+  "license": "CC0-1.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mihaeljaksic4/OR.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "televizija",
+    "serije",
+    "glumci",
+    "kreatori",
+    "žanrovi"
+  ],
   "type": "commonjs",
   "bugs": {
     "url": "https://github.com/mihaeljaksic4/OR/issues"

@@ -1,0 +1,159 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/mihaeljaksic4/OR/main/schema.json",
+  "title": "Televizijske serije",
+  "description": "Otvoreni skup podataka o televizijskim serijama s mrežama, žanrovima, kreatorima i glavnim ulogama.",
+  "type": "array",
+  "items": {
+    "title": "Serija",
+    "description": "Jedna televizijska serija sa svim pripadajućim podacima.",
+    "type": "object",
+    "required": [
+      "id",
+      "naziv",
+      "zemlja",
+      "mreza",
+      "godina_pocetka",
+      "godina_zavrsetka",
+      "broj_sezona",
+      "broj_epizoda",
+      "prosjecno_trajanje_epizode",
+      "ocjena",
+      "zanrovi",
+      "kreatori",
+      "uloge"
+    ],
+    "properties": {
+      "id": {
+        "title": "ID",
+        "description": "Jedinstveni identifikator serije.",
+        "type": "integer"
+      },
+      "naziv": {
+        "title": "Naziv",
+        "description": "Izvorni naziv serije.",
+        "type": "string"
+      },
+      "zemlja": {
+        "title": "Zemlja",
+        "description": "Zemlja podrijetla serije.",
+        "type": "string"
+      },
+      "mreza": {
+        "title": "Mreža",
+        "description": "Mreža ili streaming servis na kojem se serija izvorno prikazivala.",
+        "type": "object",
+        "required": ["naziv", "vrsta"],
+        "properties": {
+          "naziv": {
+            "title": "Naziv mreže",
+            "description": "Naziv televizijske mreže ili streaming servisa.",
+            "type": "string"
+          },
+          "vrsta": {
+            "title": "Vrsta mreže",
+            "description": "Je li riječ o televizijskoj mreži ili streaming servisu.",
+            "type": "string",
+            "enum": ["televizijska mreža", "streaming servis"]
+          }
+        }
+      },
+      "godina_pocetka": {
+        "title": "Godina početka",
+        "description": "Godina prikazivanja prve epizode.",
+        "type": "integer"
+      },
+      "godina_zavrsetka": {
+        "title": "Godina završetka",
+        "description": "Godina prikazivanja zadnje epizode; null ako se serija još prikazuje.",
+        "type": ["integer", "null"]
+      },
+      "broj_sezona": {
+        "title": "Broj sezona",
+        "description": "Ukupan broj sezona.",
+        "type": "integer",
+        "minimum": 1
+      },
+      "broj_epizoda": {
+        "title": "Broj epizoda",
+        "description": "Ukupan broj epizoda.",
+        "type": "integer",
+        "minimum": 1
+      },
+      "prosjecno_trajanje_epizode": {
+        "title": "Prosječno trajanje epizode",
+        "description": "Prosječno trajanje jedne epizode u minutama.",
+        "type": "integer",
+        "minimum": 1
+      },
+      "ocjena": {
+        "title": "Ocjena",
+        "description": "Prosječna ocjena korisnika IMDb-a na ljestvici od 0 do 10.",
+        "type": "number",
+        "minimum": 0,
+        "maximum": 10
+      },
+      "zanrovi": {
+        "title": "Žanrovi",
+        "description": "Popis žanrova kojima serija pripada.",
+        "type": "array",
+        "items": {
+          "title": "Žanr",
+          "description": "Naziv žanra.",
+          "type": "string"
+        }
+      },
+      "kreatori": {
+        "title": "Kreatori",
+        "description": "Osobe koje su stvorile seriju.",
+        "type": "array",
+        "items": {
+          "title": "Kreator",
+          "description": "Ime i prezime kreatora.",
+          "type": "object",
+          "required": ["ime", "prezime"],
+          "properties": {
+            "ime": {
+              "title": "Ime",
+              "description": "Ime kreatora.",
+              "type": "string"
+            },
+            "prezime": {
+              "title": "Prezime",
+              "description": "Prezime kreatora.",
+              "type": "string"
+            }
+          }
+        }
+      },
+      "uloge": {
+        "title": "Uloge",
+        "description": "Tri glavne uloge u seriji, poredane po važnosti.",
+        "type": "array",
+        "items": {
+          "title": "Uloga",
+          "description": "Glumac i lik kojeg tumači.",
+          "type": "object",
+          "required": ["ime", "prezime", "lik"],
+          "properties": {
+            "ime": {
+              "title": "Ime",
+              "description": "Ime glumca.",
+              "type": "string"
+            },
+            "prezime": {
+              "title": "Prezime",
+              "description": "Prezime glumca.",
+              "type": "string"
+            },
+            "lik": {
+              "title": "Lik",
+              "description": "Ime lika kojeg glumac tumači.",
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

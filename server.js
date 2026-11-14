@@ -55,7 +55,7 @@ const UVJETI = {
 function csvPolje(vrijednost) {
     if (vrijednost === null || vrijednost === undefined) return '';
     const tekst = String(vrijednost);
-    if (/[",\n"]/.test(tekst)) {
+    if (/[",\n]/.test(tekst)) {
         return '"' + tekst.replace(/"/g, '""') + '"';
     }
     return tekst;
